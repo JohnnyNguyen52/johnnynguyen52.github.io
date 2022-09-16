@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Johnny Nguyen : CSC 196W-02</title>
+  </head>
+  
+  <body>
+    <div id = "Title">
+        <h1>Main Page</h1>
+    </div>
+        <!--<nav>
+            <ul><a href="MySite.html" class="active">HOME</a></ul>
+        
+        </nav> -->
+        <main>
+            <h3>Info</h3>
+            <p>Hello my name is Johnny Nguyen and this is my site! Currently the site does looks empty and pretty plain. But I will be improving it over time.
+            <h3>Future Updates</h3>
+            <p>These are some of the updates I am planning on doing. There is no order, just whatever I decide first.</p>
+                <ul>
+                    <li>Context Menu</li>
+                    <li>Links that go to other parts of the website</li>
+                    <li>Simpler Design</li>
+                    <li>Suggestion Box</li>
+                </ul>
+            </p>
+            <h3>Suggestion Box</h3>
+            <p>If you have any suggestions, please submit them into the suggestion box and I will add them to the list. </p>
+
+             <div>
+            <textarea class = "inputText" >
+                </textarea>
+            </div>
+           
+            <button>submit</button>
+            <line></line>
+            
+           
+           
+        </main>
+    
+  </body>
+ 
+  <script>const btn = document.querySelector('button');
+
+   function print(){
+      const para = document.querySelector('line');
+      para.textContent = "So...this doesn't work. But I swear I will get it working";
+    }
+    btn.addEventListener('click', print);
+    
+ 
+    </script>
+
+  <style>
+    
+    h1{
+        padding: 15px;
+        color:rgb(255, 255, 255);
+        background-color: rgb(28, 28, 132);
+        text-align: center;
+    }
+  
+    .inputText{
+        width: 200px;
+        height: 100px;
+        font-family : 'Times New Roman' !important;
+        font-size:16px;
+        resize: none;
+    }
+    main {
+    padding: 20px 10px;
+    background-color: #ffffff;
+    }
+
+    p{
+        font-size: 16px;
+    }
+    
+    body{
+    background-color: rgb(31, 31, 31);
+    }
+ </style>
+</html>
