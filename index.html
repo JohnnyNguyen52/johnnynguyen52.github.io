@@ -28,12 +28,13 @@
             <h3>Suggestion Box</h3>
             <p>If you have any suggestions, please submit them into the suggestion box and I will add them to the list. </p>
 
-             <div>
-            <textarea class = "inputText" >
-                </textarea>
-            </div>
+             
+            <textarea id="Text" name="Text" rows="4" cols="30" ></textarea>
            
-            <button>submit</button>
+           <div>
+            <button class="submitButton">Submit</button>
+            </div>
+
             <line></line>
             
            
@@ -42,7 +43,7 @@
     
   </body>
  
-  <script>const btn = document.querySelector('button');
+  <script>const btn = document.querySelector(".submitButton");
 
    function print(){
       const para = document.querySelector('line');
@@ -56,30 +57,36 @@
   <style>
     
     h1{
+        font-family : 'Cascadia Code';
         padding: 15px;
         color:rgb(255, 255, 255);
         background-color: rgb(28, 28, 132);
         text-align: center;
     }
   
-    .inputText{
-        width: 200px;
-        height: 100px;
-        font-family : 'Times New Roman' !important;
-        font-size:16px;
+    textarea{
+        font-family : 'Cascadia Code';
+        /*font-family : 'Times New Roman' !important;
+        font-size:16px;*/
         resize: none;
     }
     main {
-    padding: 20px 10px;
+    /*padding: 20px 10px;*/
+    font-family : 'Cascadia Code';
     background-color: #ffffff;
     }
 
     p{
+        font-family : 'Cascadia Code';
         font-size: 16px;
     }
     
     body{
+        font-family : 'Cascadia Code';
     background-color: rgb(31, 31, 31);
+    }
+    button{
+        font-family : 'Cascadia Code';
     }
  </style>
 </html>
