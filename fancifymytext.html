@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify Shamcify</title>
+
+		<!-- link to your script file here -->
+		<script>
+			function function1(){
+				//alert("Holy mackerels Batman! It works!");
+				document.getElementById("textBox").style.fontSize = "24pt"; 
+			}
+			function function2(){
+				//alert("Function 2 Works");
+				document.getElementById("textBox").style.fontWeight = "bold";
+				document.getElementById("textBox").style.textDecoration = "underline";
+				document.getElementById("textBox").style.color = "blue";
+			}
+			function function3(){
+				//alert("Function 3 Works");
+				document.getElementById("textBox").style.fontWeight = "normal";
+				document.getElementById("textBox").style.textDecoration = "none";
+				document.getElementById("textBox").style.color = "black";
+			}
+			function function4(){
+				//alert("Function 4 Works");
+				var x = document.getElementById("textBox");
+				x.value = x.value.toUpperCase();
+				var parts = x.value.split(" ");
+				x.value = parts.join("-Moo ");
+				var parts =  x.value.split(".");
+				x.value = parts.join("-Moo.");
+				
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+		
+
+		<!-- Your UI controls go here -->
+		<fieldset label = "Text">
+		<textarea  id = "textBox" name="box" rows="4" cols="30" ></textarea>
+
+		</fieldset>
+		<fieldset label = "Fancify">
+			<button onclick="function1()" class="bigButton">Bigger!</button>
+			<br>
+			<button onclick="function4()" class="mooButton">Moo</button>
+		
+		<form>
+			<input type="radio" id="fancyshmancy" name="style" value="FancyShmancy" onchange = "function2()">
+  			<label for="fancyshmancy">FancyShmancy</label><br>
+			<input type="radio" id="boringbetty" name="style" value="BoringBetty" onchange = "function3()">
+  			<label for="boringbetty">BoringBetty</label><br>
+		</form>
+	</fieldset>
+		
+		
+		
+	</body>
+	<style>
+		fieldset {
+  background-color: #eeeeee;
+			}	
+			textarea{
+       /* font-family : 'Cascadia Code';*/
+
+        resize: none;
+    }	
+	</style>
+</html>
