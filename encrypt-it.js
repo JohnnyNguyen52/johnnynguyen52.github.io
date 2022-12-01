@@ -13,14 +13,84 @@ function encrypt(){
   n2.value = n1.value; */
   var test1 = document.getElementById("input-text");
   var test2 = document.getElementById("result");
-  document.getElementById("result").value = test1.value;
+  var choice = document.getElementById("cipher-type").value;
+
+  if(choice == "shift"){
+    document.getElementById("result").value = shiftCipher(test1.value);
+  }
+  else{
+    document.getElementById("result").value = random(test1.value);
+  }
+  var choice2 = document.getElementsByName("text-size");
+  console.log(choice2[0].value);
+if(choice2[0].checked == true){
+  document.getElementById("result").style.fontSize = "12pt";
+} 
+else{
+  document.getElementById("result").style.fontSize = "24pt";
+}
+var choice3 = document.getElementById("all-caps");
+if(choice3.checked == true){
+  document.getElementById("result").value = allCaps(document.getElementById("result").value);
+}
+  
+
+
+
+
+
+
+  
   console.log("Done");
  /* fSize = document.getElementsByName("text-size").value;
   document.getElementById("result").style.fontSize = fSize;*/
 }
+function reset(){
+  document.getElementById("input-text").value = " ";
+  document.getElementById("result").value = " ";
+}
+function allCaps(text){
+  return text.toUpperCase();
+}
+function shiftCipher(text){
+  text = text.toLowerCase();
+
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] < 'a' || text[i] > 'z') {
+      result += text[i];
+    } else if (text[i] == 'z') {
+      result += 'a';
+    } else { // letter is between 'a' and 'y'
+      let letter = text.charCodeAt(i);
+      let resultLetter = String.fromCharCode(letter + 1);
+      result += resultLetter;
+    }
+  }
+  return result;
+}
+function random(text){
+  text = text.toLowerCase();
+
+  let result = "";
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] < 'a' || text[i] > 'z') {
+      result += text[i];
+    } else if (text[i] == 'z') {
+      result += 'b';
+    } else { // letter is between 'a' and 'y'
+      let letter = text.charCodeAt(i);
+      let resultLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+      result += resultLetter;
+    }
+  }
+  return result;
+  //a = 97
+  //z = 122
+}
 (function() {
   "use strict";
-  console.log("Derp");
+
   /**
    * The starting point in our program, setting up a listener
    * for the "load" event on the window, signalling the HTML DOM has been constructed
