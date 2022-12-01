@@ -8,9 +8,7 @@ function spoke(){
 //cyType, fSize, caps
 function encrypt(){
   console.log("Running Encryption");
-  /*var n1 = document.getElementById('n1');
-  var n2 = document.getElementById('n2');
-  n2.value = n1.value; */
+
   var test1 = document.getElementById("input-text");
   var test2 = document.getElementById("result");
   var choice = document.getElementById("cipher-type").value;
@@ -22,7 +20,6 @@ function encrypt(){
     document.getElementById("result").value = random(test1.value);
   }
   var choice2 = document.getElementsByName("text-size");
-  console.log(choice2[0].value);
 if(choice2[0].checked == true){
   document.getElementById("result").style.fontSize = "12pt";
 } 
@@ -42,8 +39,7 @@ if(choice3.checked == true){
 
   
   console.log("Done");
- /* fSize = document.getElementsByName("text-size").value;
-  document.getElementById("result").style.fontSize = fSize;*/
+
 }
 function reset(){
   document.getElementById("input-text").value = " ";
@@ -61,7 +57,7 @@ function shiftCipher(text){
       result += text[i];
     } else if (text[i] == 'z') {
       result += 'a';
-    } else { // letter is between 'a' and 'y'
+    } else { 
       let letter = text.charCodeAt(i);
       let resultLetter = String.fromCharCode(letter + 1);
       result += resultLetter;
@@ -78,7 +74,7 @@ function random(text){
       result += text[i];
     } else if (text[i] == 'z') {
       result += 'b';
-    } else { // letter is between 'a' and 'y'
+    } else {
       let letter = text.charCodeAt(i);
       let resultLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
       result += resultLetter;
